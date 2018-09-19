@@ -71,16 +71,43 @@ public class NChenLib {
         return newDate;
     }
 
-    //Challenge Method 1
+    //Challenge Method 1 (preserves space but not punctuations and other special characters)
     public static String vigCipher(String msg, String key){
-        //turns everything into upper case to avoid errors
+        //turns everything into upper case for ASCII conversion
         String msgU = msg.toUpperCase();
         String keyU = key.toUpperCase();
-       // create an array ascii = [];
-        for(int i=0;i<key.length();i++){
-            int ascii = (int)key.charAt(i);
-            //figure out how to turn STRING into ASCII
+
+        //declaring key index and an empty string for the deciphered word
+        int keyIndex = 0;
+        String decoded = new String("");
+
+        int x,y,z = 0;
+        for(int i=0;i<msgU.length();i++){
+
+            //checks for space
+            if(msgU.substring(i,i+1).equals(" ")){
+                decoded += " ";
+            } else {
+                //resets the keyIndex if it reaches the end of the key
+                if (keyIndex > keyU.length() - 1) {
+                    keyIndex = 0;
+                }
+
+                //turns the character into their ASCII, subtract by 65 to get their alphabetical order
+                x = (int) keyU.charAt(keyIndex) - 65;
+                y = (int) msgU.charAt(i) - 65;
+                z = x + y;
+
+                //adds 65 back after decrypting, subtract by 26 if it goes over z to restart at a
+                if (z > 26) {
+                    z += 39;
+                } else {
+                    z += 65;
+                }
+                decoded += Character.toString((char) z);
+                keyIndex++;
+            }
         }
-        //        return Character.toString((char)65);
+        return decoded;
     }
 }

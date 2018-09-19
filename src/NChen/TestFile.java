@@ -38,6 +38,8 @@ public class TestFile {
 
         System.out.println("\n\nChallenge Method 1 Returns (vigCipher):");
         //testing challenge method 1
-        System.out.println(vigCipher("test","test"));
+        System.out.println(vigCipher("ATTACKATDAWN","LEMON"));
+        System.out.println(vigCipher("attack at dawn","lemon"));
+        System.out.println(vigCipher("JAVA IS COOL","MAYBE"));
     }
 }
