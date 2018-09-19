@@ -36,10 +36,19 @@ public class TestFile {
         System.out.println(dateStr("01/02/3456"));
         System.out.println(dateStr("09/18/2018"));
 
-        System.out.println("\n\nChallenge Method 1 Returns (vigCipher):");
-        //testing challenge method 1
+        System.out.println("\n\nString Challenge Method 1 Returns (vigCipher):");
+        //testing string challenge method 1
         System.out.println(vigCipher("ATTACKATDAWN","LEMON"));
         System.out.println(vigCipher("attack at dawn","lemon"));
         System.out.println(vigCipher("JAVA IS COOL","MAYBE"));
+
+        System.out.println("\n\nString Challenge Method 2 Returns (stringUnion):");
+        //testing string challenge method 2
+        System.out.println(stringUnion("hello","hola","nihao"));
+        System.out.println(stringUnion("a","b","c"));
+        System.out.println(stringUnion("apple","lemon","pie"));
+
+        System.out.println("\n\nMath Challenge Method 1 Returns (quadSolver):");
+        //testing math challenge method 1
     }
 }

@@ -71,7 +71,7 @@ public class NChenLib {
         return newDate;
     }
 
-    //Challenge Method 1 (preserves space but not punctuations and other special characters)
+    //String Challenge Method 1 (preserves space but not punctuations and other special characters)
     public static String vigCipher(String msg, String key){
         //turns everything into upper case for ASCII conversion
         String msgU = msg.toUpperCase();
@@ -109,5 +109,39 @@ public class NChenLib {
             }
         }
         return decoded;
+    }
+
+    //String Challenge Method 2
+    public static int stringUnion(String word1, String word2, String word3){
+        //turns everything to uppercase because method uses ASCII code to check for shared unique letters
+        String Word1 = word1.toUpperCase();
+        String Word2 = word2.toUpperCase();
+        String Word3 = word3.toUpperCase();
+
+        //count of unique letters shared
+        int count = 0;
+
+        //goes through the alphabet using ASCII code to see if it is shared by at least two of the words
+        for(int i=65;i<90;i++){
+            if(Word1.contains(Character.toString((char)i))){
+                if(Word2.contains(Character.toString((char)i))||Word3.contains(Character.toString((char)i))){
+                    count++;
+                }
+            } else {
+                if(Word2.contains(Character.toString((char)i))&&Word3.contains(Character.toString((char)i))){
+                    count++;
+                }
+            }
+        }
+
+        return count;
+    }
+
+    //Math Challenge Method 1
+    public static double quadSolver(double a, double b, double c){
+        //checks if the discriminant is negative(imaginary roots if negative)
+        if(Math.pow(b,2)-4*a*c<0){
+            return "Imaginary Roots: " + (-b/2*a) + "±"
+        }
     }
 }
