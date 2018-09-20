@@ -1,3 +1,5 @@
+//Nick Chen September 2018 Method Madness
+
 package NChen;
 
 import static NChen.NChenLib.*;
@@ -50,5 +52,14 @@ public class TestFile {
 
         System.out.println("\n\nMath Challenge Method 1 Returns (quadSolver):");
         //testing math challenge method 1
+        System.out.println(quadSolver(1,4,5));
+        System.out.println(quadSolver(1,3,2));
+        System.out.println(quadSolver(1,2,1));
+
+        System.out.println("\n\nMath Challenge Method 2 Returns (leastCommonMultiple):");
+        //testing math challenge method 2
+        System.out.println(leastCommonMultiple(2,4,6));
+        System.out.println(leastCommonMultiple(8,9,10));
+        System.out.println(leastCommonMultiple(1,2,3));
     }
 }
