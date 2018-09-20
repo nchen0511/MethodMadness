@@ -200,6 +200,7 @@ public class NChenLib {
 
     /**Math Challenge Method 2
      * Returns the least common multiple of the three num by using the LCM method twice
+     *
      * @param num1
      * @param num2
      * @param num3
@@ -210,6 +211,13 @@ public class NChenLib {
         return LCM(LCM(num1,num2),num3);
     }
 
+    /**LCM
+     * Checks for LCM
+     *
+     * @param num1
+     * @param num2
+     * @return
+     */
     public static int LCM(int num1, int num2){
         //looks for the smaller value for the for loop to initialize the i as
         int small;
