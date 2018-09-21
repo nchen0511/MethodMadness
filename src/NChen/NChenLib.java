@@ -24,7 +24,7 @@ public class NChenLib {
     }
 
     /**String method 2
-     * Cuts out a character from mainStr at the index of the subStr
+     * Cuts out subStr from the mainStr
      *
      * @param mainStr
      * @param subStr
@@ -37,8 +37,8 @@ public class NChenLib {
             return mainStr;
         }
 
-        //looks for the index of the subStr, cuts out the character at the index, and concatenates the rest of the mainStr
-        return mainStr.substring(0,mainStr.indexOf(subStr)) + mainStr.substring(mainStr.indexOf(subStr)+1);
+        //looks for the index of the subStr, cuts out the subStr, and concatenates the rest of the mainStr
+        return mainStr.substring(0,mainStr.indexOf(subStr)) + mainStr.substring(mainStr.indexOf(subStr)+subStr.length());
     }
 
     /**Math method 1
